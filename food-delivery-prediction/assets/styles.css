@@ -1,0 +1,427 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+.stApp {
+  background:
+    radial-gradient(900px 320px at 0% -10%, rgba(255, 107, 26, 0.14), transparent 55%),
+    radial-gradient(700px 280px at 100% 0%, rgba(14, 28, 54, 0.07), transparent 50%),
+    #f4f6fa;
+  color: #122033;
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+.stApp h1,
+.stApp h2,
+.stApp h3,
+.stApp p,
+.stApp label,
+.stApp span,
+.stApp li,
+div[data-testid="stMarkdownContainer"] {
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+header[data-testid="stHeader"] {
+  background: transparent;
+}
+
+#MainMenu,
+footer,
+div[data-testid="stToolbar"] {
+  visibility: hidden;
+  height: 0;
+}
+
+.block-container {
+  max-width: 1080px;
+  padding-top: 1.4rem;
+  padding-bottom: 3rem;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #0e1c36 0%, #173056 62%, #21406d 100%);
+  border-radius: 28px;
+  padding: 28px 32px;
+  color: #ffffff;
+  box-shadow: 0 18px 40px rgba(14, 28, 54, 0.18);
+  margin-bottom: 8px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  right: -70px;
+  top: -90px;
+  border-radius: 50%;
+  background: rgba(255, 107, 26, 0.22);
+}
+
+.hero-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px 20px;
+}
+
+.brand {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  min-width: 0;
+  flex: 1 1 280px;
+}
+
+.mark {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ff8a3d 0%, #ff6b1a 100%);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 20px rgba(255, 107, 26, 0.35);
+  flex: 0 0 auto;
+}
+
+.hero h1 {
+  margin: 0;
+  max-width: 100%;
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.hero .subtitle {
+  margin: 8px 0 0;
+  color: #d5deea;
+  font-size: 16px;
+  line-height: 1.45;
+  max-width: 560px;
+}
+
+.badge {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  background: rgba(255, 107, 26, 0.16);
+  color: #ffe3d2;
+  border: 1px solid rgba(255, 168, 112, 0.55);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff6b1a;
+  box-shadow: 0 0 0 4px rgba(255, 107, 26, 0.18);
+}
+
+.section-kicker {
+  margin: 4px 0 0;
+  color: #ff6b1a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 0;
+  color: #122033;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.section-copy {
+  margin: 4px 0 12px;
+  color: #5c6b80;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+div[data-testid="stForm"] {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+div[data-testid="stVerticalBlockBorderWrapper"] {
+  background: #ffffff;
+  border: 1px solid #e6ebf2;
+  border-radius: 24px;
+  box-shadow: 0 12px 32px rgba(18, 32, 51, 0.05);
+  padding: 4px 8px 8px;
+}
+
+div[data-testid="stFormSubmitButton"] button {
+  border-radius: 14px;
+  min-height: 52px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+
+button[kind="primary"],
+button[data-testid="stBaseButton-primary"] {
+  background: linear-gradient(180deg, #ff7d38 0%, #ff6b1a 100%);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 12px 22px rgba(255, 107, 26, 0.28);
+}
+
+button[kind="primary"]:hover,
+button[data-testid="stBaseButton-primary"]:hover {
+  background: linear-gradient(180deg, #ff8b4d 0%, #f06212 100%);
+  color: #ffffff;
+  border: none;
+}
+
+button[kind="secondary"],
+button[data-testid="stBaseButton-secondary"] {
+  background: #ffffff;
+  color: #0e1c36;
+  border: 1px solid #d5ddea;
+  box-shadow: none;
+}
+
+div[data-testid="stSlider"] label,
+div[data-testid="stSelectbox"] label {
+  font-weight: 600;
+  color: #122033;
+}
+
+.alert {
+  border-radius: 16px;
+  padding: 14px 16px;
+  margin: 8px 0 4px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.alert-error {
+  background: #fff1f0;
+  color: #8d1d18;
+  border: 1px solid #ffd0cc;
+}
+
+.alert-info {
+  background: #ffffff;
+  color: #3d4d63;
+  border: 1px dashed #d5ddea;
+}
+
+.result-card {
+  margin-top: 8px;
+  background: #ffffff;
+  border: 1px solid #e6ebf2;
+  border-radius: 28px;
+  box-shadow: 0 16px 40px rgba(18, 32, 51, 0.07);
+  padding: 26px 28px;
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.result-kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ff6b1a;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.clock {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: #fff1e8;
+  display: grid;
+  place-items: center;
+}
+
+.result-card h2 {
+  margin: 10px 0 0;
+  font-size: 28px;
+  letter-spacing: -0.03em;
+  color: #122033;
+}
+
+.ready {
+  margin: 6px 0 0;
+  color: #5c6b80;
+  font-size: 15px;
+}
+
+.minutes {
+  margin: 14px 0 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.minutes strong {
+  font-size: 72px;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  color: #0e1c36;
+  font-weight: 800;
+}
+
+.minutes span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ff6b1a;
+  padding-bottom: 8px;
+}
+
+.exact {
+  margin: 8px 0 0;
+  color: #5c6b80;
+  font-size: 13px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.chip {
+  background: #f4f6fa;
+  color: #24344c;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ring-wrap {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.ring-caption {
+  margin: 0;
+  color: #5c6b80;
+  font-size: 13px;
+  text-align: center;
+}
+
+.empty-card {
+  margin-top: 8px;
+  background: #ffffff;
+  border: 1px dashed #d5ddea;
+  border-radius: 24px;
+  padding: 22px 24px;
+  color: #5c6b80;
+}
+
+.empty-card strong {
+  display: block;
+  color: #122033;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.footnote {
+  margin-top: 14px;
+  color: #7b8798;
+  font-size: 12px;
+}
+
+div[data-testid="stAlert"] {
+  border-radius: 16px;
+}
+
+.duration {
+  margin-top: 18px;
+}
+
+.track {
+  height: 14px;
+  background: #eef2f7;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ffc49a 0%, #ff6b1a 100%);
+}
+
+.track-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  color: #5c6b80;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.caution {
+  margin: 10px 0 0;
+  color: #8a4b12;
+  font-size: 13px;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    padding: 22px 18px;
+    border-radius: 22px;
+  }
+
+  .hero-row,
+  .result-card {
+    display: block;
+  }
+
+  .brand {
+    display: flex;
+    margin-bottom: 14px;
+  }
+
+  .badge {
+    margin-top: 0;
+  }
+
+  .hero h1 {
+    font-size: 1.55rem;
+  }
+
+  .minutes strong {
+    font-size: 60px;
+  }
+
+  .ring-wrap {
+    margin-top: 18px;
+  }
+}
