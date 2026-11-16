@@ -1,74 +1,95 @@
-# Food Delivery Time Predictor
+# 🍔 Food Delivery Time Predictor
 
-A single-page Streamlit app that estimates how many minutes a food delivery will take. It asks for the seven inputs the saved Random Forest was trained on, encodes the categories with the saved label encoders, and shows that model's prediction.
+A Machine Learning-based web application that predicts estimated food delivery time in minutes using a trained Random Forest model.
 
-The app does not train a model and does not estimate anything other than delivery time.
+## 🌐 Live Demo
 
-## What you enter
+🚀 **Try the live application here:**
 
-- Distance (km)
-- Weather
-- Traffic level
-- Time of day
-- Vehicle type
-- Preparation time (minutes)
-- Courier experience (years)
+👉 https://food-delivery-time-prediction-1.streamlit.app/
 
-The result is `Delivery_Time_min`.
+## 📌 Project Overview
 
-## Project layout
+The Food Delivery Time Predictor uses Machine Learning to estimate how long a food order may take to reach the customer. The application is built using Python and Streamlit, with a saved Random Forest model for predictions.
 
+## ✨ Features
+
+- Predicts food delivery time in minutes.
+- Uses a trained Random Forest model.
+- Interactive Streamlit web interface.
+- Seven input features for predictions.
+- Instant prediction results.
+
+## 🛠️ Technologies Used
+
+- Python
+- Streamlit
+- Scikit-learn
+- Pandas
+- NumPy
+- Random Forest Algorithm
+- Machine Learning
+
+## 📂 Project Structure
+
+```text
+Food-Delivery-time-prediction/
+│
+├── food-delivery-prediction/
+│   ├── app.py
+│   ├── requirements.txt
+│   ├── README.md
+│   └── model files
+│
+└── README.md
 ```
-food-delivery-prediction/
-    app.py
-    model/
-        best_random_forest_model.pkl
-        label_encoders.pkl
-    data/
-        Food_Delivery_Times.csv
-    utils/
-        prediction.py
-    requirements.txt
-    README.md
-```
 
-`model/best_random_forest_model.pkl` is the RandomForestRegressor saved from training (scikit-learn 1.6.1). `model/label_encoders.pkl` is a dictionary of LabelEncoders for Weather, Traffic_Level, Time_of_Day, and Vehicle_Type. The app loads each file once and does not scale the inputs.
+## 💻 Run Locally
 
-`data/Food_Delivery_Times.csv` is the public 1,000-row Food Delivery Times table (the NTUA Data Analysis exercise file, with these same columns). The page uses it only to set slider ranges. It is not sent to the model.
-
-## Run it
-
-From this folder:
+**1. Clone the repository**
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
+git clone https://github.com/Shashankumar11/Food-Delivery-time-prediction.git
+```
+
+**2. Navigate to the project folder**
+
+```bash
+cd Food-Delivery-time-prediction/food-delivery-prediction
+```
+
+**3. Create a virtual environment**
+
+```bash
+python -m venv .venv
+```
+
+**4. Activate the environment**
+
+```bash
+.venv\Scripts\activate
+```
+
+**5. Install dependencies**
+
+```bash
 pip install -r requirements.txt
-streamlit run app.py --server.port 8654 --server.address 0.0.0.0
 ```
 
-On Windows, activate the environment with `.venv\Scripts\activate` and use the same `pip` and `streamlit` commands.
-
-Then open http://localhost:8654.
-
-`requirements.txt` pins scikit-learn 1.6.1 so the pickle loads with the version that created it.
-
-## Check the saved model from the terminal
-
-With the virtual environment active and both pickle files in `model/`:
+**6. Run the application**
 
 ```bash
-python -m utils.prediction
+streamlit run app.py
 ```
 
-That prints one delivery-time prediction, in minutes, for a fixed sample order (7.93 km, Windy, Low traffic, Afternoon, Scooter, 12 minutes of preparation, 1 year of experience). The number comes from `model.predict`.
+Open the local URL displayed in your terminal.
 
-Run the checks for encoding and column order with:
+## 👨‍💻 Author
 
-```bash
-python -m unittest tests.test_prediction
-```
+**Shashank Kumar**
 
-## If prediction is unavailable
+GitHub: https://github.com/Shashankumar11
 
-The Predict button needs both pickle files in `model/` under the names above. If either file is missing, or a chosen category was not in the encoder, the page shows the reason and does not display a delivery time.
+---
+
+⭐ If you like this project, don't forget to give it a star!
